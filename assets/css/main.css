@@ -25,6 +25,10 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+	#map {margin: auto;
+			    border-style: solid;
+				border-width: 5px;
+	}
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -2670,5 +2674,4 @@ input, select, textarea {
 					margin-left: 0;
 					border-left: 0;
 				}
-
 	}
