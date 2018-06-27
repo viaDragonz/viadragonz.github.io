@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Strongly Typed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>DITLE Home</title>
@@ -19,8 +14,14 @@
 					<div class="container">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">DITLE</a></h1>
-							<p>A UC Information Technology Camp</p>
+							<img src="uc.png" alt="UC Logo" style="width:250px;height:125px">
+							<br>
+							<br>
+							<br>
+							<br>
+							<h1 id="logo">DITLE</h1>
+							<br>
+							<h2>A UC Information Technology Camp</h2>
 			<!-- Main -->
 				<section id="main">
 					<div class="container">
@@ -32,18 +33,101 @@
 										<h2>Welcome to DITLE, a camp for students<br />
 										grades 7-12</h2>
 									</header>
-									<span class="image featured"><img src="images/pic04.jpg" alt="" /></span>
+									<!-- Slideshow container -->
+									<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+
+										<div class="mySlides fade">
+											<img src="fieldpic.JPG" style="width:50%">
+											<div class="text">Students play Ultimate Frisbee on the field</div>
+										</div>
+
+										<div class="mySlides fade">
+											<img src="group.jpg" style="width:50%">
+											<div class="text">2018 DITLE Program Students</div>
+										</div>
+
+										<div class="mySlides fade">
+											<img src="pablo.JPG" style="width:50%">
+											<div class="text">Pablo Nation!</div>
+										</div>
+
+										</div>
+										<br>
+
+										<!-- The dots/circles -->
+										<div style="text-align:center">
+											<span class="dot" onclick="currentSlide(1)"></span> 
+											<span class="dot" onclick="currentSlide(2)"></span> 
+											<span class="dot" onclick="currentSlide(3)"></span> 
+										</div>
+										<br>
+										<script>
+											var slideIndex = 0;
+											showSlides();
+
+											function showSlides() {
+												var i;
+												var slides = document.getElementsByClassName("mySlides");
+												for (i = 0; i < slides.length; i++) {
+													slides[i].style.display = "none"; 
+											}
+											slideIndex++;
+											if (slideIndex > slides.length) {slideIndex = 1} 
+												slides[slideIndex-1].style.display = "block"; 
+												setTimeout(showSlides, 7000); // Change image every 2 seconds
+											}
+										</script>
 									<h3>What we do</h3>
 									<p>DITLE is a strategic educational initiative by the University of Cincinnati (UC) to prepare Cincinnati high school students for post‐secondary education and careers in Information Technology. The program is funded by the National Science Foundation and is implemented by a collaborative effort between UC’s School of Information Technology, UC’s School of Education, and partner high schools in the Cincinnati area.
                                        The DITLE Summer program is a 3 week intensive summer IT day camp designed to give students a solid foundation in computer fundamentals, computer application development, database and networking concepts. The program is a hands on, project based, team oriented learning experience at the University of Cincinnati campus using UC state of the art equipment and instructors.
                                        This program is offered at no charge to students.  All materials and equipment will be provided.  Transportation from the participating high school to the University of Cincinnati and back from the University of Cincinnati to the high school will be provided each day.  Lunch will be provided each day (please note any dietary restrictions in the application).
 </p>
 								</article>
-
+								<article>
+								<h2>Resources</h2>
+									<p>
+										<div id="linktext">
+											<b><a href="2018UC DITLE Summer Program Application.docx">DITLE Application</a></b>
+											<br>
+											<br>
+											<b><a href="https://cech.mediaspace.kaltura.com/channel/DITLE%2BPublic/46362191">Previous Presentations</a>
+										</div>
+									</p>
+								</article>
 						</div>
 					</div>
 				</section>
+				<hr>
+				<hr>
+				<br>
+				<br>
+				<section>
+					<article>
+						<div class="container">
+							<h2>Our Location</h2>
+							<br>
+							<div id="map" style="width:400px;height:400px;background:yellow"></div>
 
+							<script>
+								function myMap() {
+									var uc = {lat: 39.129774, lng: -84.520274}
+									var mapOptions = {
+										center: new google.maps.LatLng(uc), zoom: 10, mapTypeId: google.maps.MapTypeId.HYBRID,
+										zoom: 17
+									}
+									var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+									var marker = new google.maps.Marker({position: uc, map: map});
+								}
+							</script>
+
+							<script async defer
+								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAfDYAC7e3K0qR9G5NB5NUZZx28KnP45I&callback=myMap"></script>
+						</div>
+					</article>
+						
+		</div>
 			<!-- Footer -->
 				<section id="footer">
 					<div class="container">
@@ -88,6 +172,7 @@
 												</li>
 												<li class="icon fa-envelope">
 													<a href="#">Rebekah.Michael@uc.edu</a>
+
 												</li>
 											</ul>
 										</div>
@@ -96,29 +181,16 @@
 							</div>
 						</div>
 					</div>
+				</section>
+				<section>
+				<article>
 					<div id="copyright" class="container">
 						<ul class="links">
 							<li>&copy; UC Information Technology. All rights reserved.</li>
 						</ul>
 					</div>
-				</section>
-				<section>
-				<h1>Location</h1>
-				<br>
-				<div id="map" style="width:400px;height:400px;background:yellow"></div>
-
-				<script>
-					function myMap() {
-						var mapOptions = {
-						center: new google.maps.LatLng(39.129774, -84.520274), zoom: 10, mapTypeId: google.maps.MapTypeId.HYBRID
-						}
-					var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-					}
-				</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAfDYAC7e3K0qR9G5NB5NUZZx28KnP45I&callback=myMap"></script>
-				</section>
-		</div>
+				</article>
+			</section>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
