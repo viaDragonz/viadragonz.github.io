@@ -47,8 +47,7 @@ ol, ul {
 }
 
 form {
-	padding-left: 5;
-	padding-right: 5;
+	padding: 50px;
 	margin: 2;
 }
 
@@ -2532,6 +2531,12 @@ input, select, textarea {
 					border-left: 0;
 				}
 	}
+	
+#bottombox {
+	padding-left: 50px;
+	padding-bottom: 50px;
+	font-size: 24px;
+}
 	/* unvisited link */
 #application:link {
     color: red;

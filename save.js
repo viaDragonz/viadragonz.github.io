@@ -1,6 +1,16 @@
 function findButton(){
 	const button = document.getElementById("button");
+	button.addEventListener("click", validateForm, false);
 	button.addEventListener("click", save, false);
+}
+
+function validateForm(x) {
+    if (x == "") {
+        alert("All values must be filled out");
+        return false;
+    } else {
+		return true;
+	}
 }
 
 function save() {
@@ -16,7 +26,16 @@ function save() {
 	values.push(phone);
 	values.push(dobstr);
 	values.push(gender);
-	display(values);
+	ArrayLength = values.length
+	let i
+	for (i = 0; i < ArrayLength; i++) {
+		validateForm(values[i])
+	}
+		if (validateForm() !== true) {
+			return
+		} else {
+			display(values);
+		};
 //	values.forEach(function(item) {
 //		display(item);
 //		});
@@ -24,7 +43,7 @@ function save() {
 
 function display(x) {
 	let displaybox = document.getElementById("bottombox");
-	displaybox.innerHTML = "Name: " + x[0] + "<br> Email: " + x[1] + "<br> Phone #: " + x[2] + "<br> DOB: " + x[3] + "<br> Gender: " + x[4] + "<br>"
+	displaybox.innerHTML = "Application: <br><br> Name: " + x[0] + "<br> Email: " + x[1] + "<br> Phone #: " + x[2] + "<br> DOB: " + x[3] + "<br> Gender: " + x[4] + "<br>"
 }
 
 
