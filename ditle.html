@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>DITLE Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/ditle.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+
+						<!-- Logo -->
+							<img src="uc.png" alt="UC Logo" style="width:250px;height:125px">
+							<br>
+							<br>
+							<br>
+							<br>
+							<h1 id="logo">DITLE</h1>
+							<br>
+							<h2>A UC Information Technology Camp</h2>
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div id="content">
+
+							<!-- Post -->
+								<article class="box post">
+									<header>
+										<h2>Welcome to DITLE, a camp for students<br />
+										grades 7-12</h2>
+									</header>
+									<!-- Slideshow container -->
+									<div class="slideshow-container">
+										<div class="mySlides fade">
+											<img src="fieldpic.JPG" style="width:50%">
+											<div class="text">Students play Ultimate Frisbee on the field</div>
+										</div>
+
+										<div class="mySlides fade">
+											<img src="group.jpg" style="width:50%">
+											<div class="text">2018 DITLE Program Students</div>
+										</div>
+
+										<div class="mySlides fade">
+											<img src="pablo.JPG" style="width:50%">
+											<div class="text">Pablo Nation!</div>
+										</div>
+
+										</div>
+										<br>
+
+										<!-- The dots/circles -->
+										<div style="text-align:center">
+											<span class="dot" onclick="currentSlide(1)"></span> 
+											<span class="dot" onclick="currentSlide(2)"></span> 
+											<span class="dot" onclick="currentSlide(3)"></span> 
+										</div>
+										<br>
+										<script>
+											var slideIndex = 0;
+											showSlides();
+
+											function showSlides() {
+												var i;
+												var slides = document.getElementsByClassName("mySlides");
+												for (i = 0; i < slides.length; i++) {
+													slides[i].style.display = "none"; 
+											}
+											slideIndex++;
+											if (slideIndex > slides.length) {slideIndex = 1} 
+												slides[slideIndex-1].style.display = "block"; 
+												setTimeout(showSlides, 7000); // Change image every 2 seconds
+											}
+										</script>
+									<h3>What we do</h3>
+									<p>DITLE is a strategic educational initiative by the University of Cincinnati (UC) to prepare Cincinnati high school students for post‐secondary education and careers in Information Technology. The program is funded by the National Science Foundation and is implemented by a collaborative effort between UC’s School of Information Technology and partner high schools in the Cincinnati area.
+                                       The DITLE Summer program is a 3 week intensive summer IT day camp designed to give students a solid foundation in computer fundamentals, computer application development, and database and networking concepts. The program is a hands on, project based, team oriented learning experience at the University of Cincinnati campus using UC's state of the art equipment and instructors.
+                                       This program is offered at no charge to students.  All materials, meals, and equipment will be provided.  Transportation to and from the university will also be provided each day. We prepare high school students for a future in IT.
+</p>
+								</article>
+								<article>
+								<h2>Resources</h2>
+									<p>
+										<div id="linktext">
+											<b><a href="2018UC DITLE Summer Program Application.docx">Printable DITLE Application</a></b>
+											<br>
+											<br>
+											<b><a href="application.html">Online Student Application</a>
+											<br>
+											<br>
+											<b><a href="https://docs.google.com/forms/d/e/1FAIpQLSclUEnOTI2pgWBKnKfYubBlcPoP2C7-QKaz3_AGNfPPPRIRQw/viewform?usp=sf_link">Online Parent Application</a>
+											<br>
+											<br>
+											<b><a href="https://cech.mediaspace.kaltura.com/channel/DITLE%2BPublic/46362191">Previous Presentations</a>
+										</div>
+									</p>
+								</article>
+						</div>
+					</div>
+				</section>
+				<hr>
+				<hr>
+				<br>
+				<br>
+				<section>
+					<article>
+						<div class="container">
+							<h2>Our Location</h2>
+							<br>
+							<div id="map" style="width:400px;height:400px;background:yellow"></div>
+
+							<script>
+								function myMap() {
+									var uc = {lat: 39.129774, lng: -84.520274}
+									var mapOptions = {
+										center: new google.maps.LatLng(uc), zoom: 10, mapTypeId: google.maps.MapTypeId.HYBRID,
+										zoom: 17
+									}
+									var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+									var marker = new google.maps.Marker({position: uc, map: map});
+								}
+							</script>
+
+							<script async defer
+								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAfDYAC7e3K0qR9G5NB5NUZZx28KnP45I&callback=myMap"></script>
+						</div>
+					</article>
+						
+		</div>
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<header>
+							<h2>Questions or comments? <strong>Get in touch with us:</strong></h2>
+						</header>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<section>
+									<form action="https://formspree.io/aidankovacic@gmail.com"method="POST">
+										<div class="row gtr-50">
+											<div class="col-6 col-12-small">
+												<input name="name" placeholder="Name" type="text" />
+											</div>
+											<div class="col-6 col-12-small">
+												<input name="email" placeholder="Email" type="text" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message"></textarea>
+											</div>
+											<div class="col-12">
+												<input type="submit" value="Send">
+											</div>
+										</div>
+									</form>
+								</section>
+							</div>
+							<div class="col-6 col-12-medium">
+								<section>
+									<p>Contact us with any of your questions, concerns, or inquiries. We will get back to you as soon as possible via email.</p>
+									<br>
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<ul class="icons">
+												<li class="icon fa-home">
+													2160 McMicken Circle<br />
+													Cincinnati, OH 45221<br />
+													USA
+												</li>
+												<li class="icon fa-phone">
+													513-556-4307
+												</li>
+												<li class="icon fa-envelope">
+													<a href="#">Rebekah.Michael@uc.edu</a>
+
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+				<article>
+					<div id="copyright" class="container">
+						<ul class="links">
+							<li>&copy; UC Information Technology. All rights reserved.</li>
+						</ul>
+					</div>
+				</article>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
