@@ -2555,8 +2555,7 @@ input, select, textarea {
 /* selected link */
 #application:active {
     color: blue;
-=======
-* {box-sizing:border-box}
+    box-sizing:border-box}
 
 /*Resouces Text*/
 #linktext {

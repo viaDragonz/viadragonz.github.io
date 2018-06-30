@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Link your Discord!</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="assets/css/login.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style type="text/css" media="screen">
+            * {
+              margin: 0; 
+              padding: 0;
+            }
+       
+            div#banner { 
+              position: absolute; 
+              top: 0; 
+              left: 0; 
+              background: linear-gradient(white, lightgray);
+              width: 100%; 
+            }
+            div#banner-content { 
+              margin: 0 auto; 
+              padding: 10px; 
+              border: 1px solid lightgray;
+              font-size:24px;
+              color:gray;
+            }
+            div#main-content { 
+              padding-top: 70px;
+           }
+           </style>
+    </head>
+
+    <body>
+        <div id="banner">
+            <div id="banner-content">
+                <p>White Flame of Otarumi Discord</p>
+            </div>
+        </div>
+        <div id="main">
+            <h1>Rules Quiz</h1>beta v1.0
+            <h2>Answer all questions correctly to be allowed onto the server!</h2>
+            <br>
+            <hr>
+            <br>
+            <script src="assets/js/quiz.js"></script>
+            <form>
+                In what channel may you spam? <input type="text" id="spam" />
+                <br>
+                <br>
+                What is the punishment level for launching a DDoS attack on someone/threatening to do so? <select id="ddos">
+                    <option value="s1">Stage 1</option>
+                    <option value="s2">Stage 2</option>
+                    <option value="s3">Keter Class</option>
+                </select>
+                <br>
+                <br>
+                Who has the final say in all situations? <select id="say">
+                    <option value="staff">Staff</option>
+                    <option value="user">Users</option>
+                    <option value="gabe">Gabe Newell Himself</option>
+                </select>
+                <br>
+                <br>
+                Type "Agree" if you acknowledge that you have read the rules and may get punished if you don't follow them <br>
+                <input type="text" id="agree" />
+            </form>
+            <br>
+            <button class="button" type="button" id="button" value="Save">Submit</button>
+            <br>
+            <br>
+            <hr>
+            <br>
+            <div id="commandbox"></div>
+            <br>
+            <div class="icons" id="icons"></div>
+        </div>
+    </body>
+</html>
