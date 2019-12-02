@@ -2582,10 +2582,15 @@ input, select, textarea {
     color: blue;
     box-sizing:border-box}
 
-/*Resouces Text*/
+/*Resources Text*/
 #linktext {
 	font-size: 26px;
 	font-family:'Source Sans Pro';
+}
+
+#resources {
+	padding-left:50;
+	align-self: center;
 }
 
 /*Slideshow*/
